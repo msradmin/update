@@ -1,0 +1,7 @@
+html {
+background: url('lp.jpg') black no-repeat center center fixed; 
+background-size: cover; 
+overflow:hidden;
+margin:0;
+padding:0;
+}

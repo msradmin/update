@@ -1,0 +1,130 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+<title>win7升级屏保(点击或按F11全屏)</title>  
+
+</head>  
+<body>
+
+
+
+<style>
+
+body {
+background: url('img/win10bg.jpg') no-repeat center center fixed; 
+background-size: cover;
+text-align:center;
+margin:0;
+padding:0;
+ 
+
+}
+
+.body {
+
+vertical-align:middle;
+position: absolute;
+top: 45%;
+height: 68.8px;
+margin-left:auto;
+margin-right:auto;
+display:block;
+width:388px;
+font-family:微软雅黑;
+font-size:25px;
+color:white;
+text-align:center;
+text-shadow: 0px 1px 5px rgba(0,0,0, 0.4);
+user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+
+.db {
+
+
+position: absolute;
+bottom: 17px;
+left: 50%;
+width: 50%;
+margin: -5% 0 0 -25%;
+    }    
+p{
+display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+
+.kk {
+
+width:400px;
+margin:0px auto;
+text-align:left;
+
+
+}
+.load
+{
+    vertical-align:middle;
+    padding-top:35px;
+    float:left;
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="kk">
+<div class="body">
+
+<img src="gif/load.gif" class="load">
+<a id="txt">正在配置 Windows 更新</a><p id="timer">0%完成</p><span>请不要关闭你的计算机.</span>
+</div>
+</div>
+
+<div class="db">
+<img src="img/db.png">
+</div>
+<script>
+var num2=0;
+var num=0;
+var cofig="正在安装 Windows 更新"
+
+function app()
+{
+  
+  if (num < 100)
+  {  
+     num=num+1;
+    document.getElementById("timer").innerHTML=num +'%完成。';
+  }
+  if (num > 99)
+  {
+    if (num2 < 100){
+
+
+    num2=num2+1;
+    document.getElementById("timer").innerHTML=num2 +'%完成。';
+     document.getElementById("txt").innerHTML=cofig;
+     }
+
+  if (num2 > 99)
+  { 
+
+    document.write(unescape('%3Clink%20href%3D%22css/bg.css%22%20rel%3D%22stylesheet%22%20type%3D%22text/css%22%20/%3E'));
+
+  }
+  }
+}
+        /*每1000毫秒(1秒)执行一次shijian()方法*/   
+        setInterval("app()", 11009)
+</script>
+
+</body>
+</html>  
